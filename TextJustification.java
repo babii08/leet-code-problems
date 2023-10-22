@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /** Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
 
 You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly maxWidth characters.
@@ -14,10 +17,10 @@ The input array words contains at least one word.
 */
 
 
-class Solution {
+class TextJustification {
     public List<String> fullJustify(String[] words, int maxWidth) {
         
-        List<String> output = new ArrayList<String>();
+        List<String> output = new ArrayList<>();
         int wordNr = 0;
         final int NR_OF_INPUT_WORDS = words.length;
         while (wordNr < NR_OF_INPUT_WORDS) {
@@ -71,10 +74,6 @@ class Solution {
     }
     
     public String generateSpaces(int nrOfSpaces) {
-        StringBuilder space = new StringBuilder();
-        for(int i=0; i<nrOfSpaces; i++) {
-            space.append(" ");
-        }
-        return space.toString();
+        return " ".repeat(Math.max(0, nrOfSpaces));
     }
 }
