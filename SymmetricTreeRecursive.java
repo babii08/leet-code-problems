@@ -52,7 +52,7 @@ public class SymmetricTreeRecursive {
         inorder(left.right, right.left, isSym);
     }
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
